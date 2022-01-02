@@ -36,7 +36,7 @@ export const menuItems = [
           {
             name: "concentrator",
             label: "Концентратор",
-          }, 
+          },
         ],
       },
       {
@@ -55,7 +55,6 @@ export const menuItems = [
           { name: "portfolio-details", label: "Жингийн тооцоолуур" },
           { name: "portfolio-details-2", label: "Жингийн датчик" },
           { name: "portfolio-details-2", label: "Жингийн туслах хэрэгсэл" },
-
         ],
       },
       {
@@ -63,13 +62,13 @@ export const menuItems = [
         label: "Усны тоолуур",
         items: [
           {
-            name: "smart",
+            name: "water-smart",
             label: "Ухаалаг",
           },
           {
-            name: "simple",
+            name: "water-simple",
             label: "энгийн",
-          }, 
+          },
         ],
       },
       { name: "dulaan-daralt", label: "Дулаан даралтын хэмжих хэрэгсэл" },
@@ -85,11 +84,11 @@ export const menuItems = [
           {
             name: "usnii-tooluur-lab",
             label: "Усны тоолуурыг лаборатори",
-          }, 
+          },
           {
             name: "jingiin-zasvar",
             label: "Жингийн засвар",
-          }, 
+          },
         ],
       },
     ],

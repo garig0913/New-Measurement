@@ -11,7 +11,7 @@ const Index = ({ comps, length, title, subTitle }) => {
   // Settings for the slider
   const settings = {
     dots: true,
-    arrows: false,
+    arrows: true,
     infinite: true,
     autoplay: true,
     speed: 500,
@@ -62,63 +62,41 @@ const Index = ({ comps, length, title, subTitle }) => {
 
   return (
     <>
-      <Box position={"relative"} height={"auto"} width={"auto"} overflow={"hidden"}>
-        <VStack spacing={2} textAlign="left">
-          <Heading as="h1" fontSize="2xl">
-            {title}
-          </Heading>
-          {/*<Text fontSize="lg" color={'gray.500'}>*/}
-          {/*    {subTitle}*/}
-          {/*</Text>*/}
-        </VStack>
-        {/* CSS files for react-slick */}
-        <link
-          rel="stylesheet"
-          type="text/css"
-          charSet="UTF-8"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-        />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-        />
-        {/* Left Icon */}
-        {/* <IconButton
-                    aria-label="left-arrow"
-                    variant="ghost"
-                    position="absolute"
-                    // left={side}
-                    // top={top}
-                    transform={'translate(0%, -50%)'}
-                    zIndex={2}
-                    onClick={() => slider?.slickPrev()}>
-                    <BiLeftArrowAlt size="30px" color={"#0092ef"} />
-                </IconButton> */}
-        {/* Right Icon */}
-        <IconButton
-          aria-label="right-arrow"
-          variant="ghost"
-          position="absolute"
-          // right={side}
-          // top={top}
-          transform={"translate(0%, -50%)"}
-          zIndex={2}
-          onClick={() => slider?.slickNext()}
-        >
-          <BiRightArrowAlt size="30px" color={"#0092ef"} />
-        </IconButton>
-        <div style={{ width: "100%", display: "inline", margin: "auto" }}>
-          {/* Slider */}
-          <Slider {...settings} ref={(slider) => setSlider()}>
-            {comps?.map((comp, i) => (
-              <div className="" key={i}>
-                <Card data={comp} />
-              </div>
-            ))}
-          </Slider>
-        </div>
-      </Box>
+      <div className="w-10/12 mx-auto">
+        <Box position={"relative"} height={""} width={"auto"}>
+          <VStack spacing={2} textAlign="left">
+            <Heading as="h1" fontSize="2xl">
+              {title}
+            </Heading>
+            {/*<Text fontSize="lg" color={'gray.500'}>*/}
+            {/*    {subTitle}*/}
+            {/*</Text>*/}
+          </VStack>
+          {/* CSS files for react-slick */}
+          <link
+            rel="stylesheet"
+            type="text/css"
+            charSet="UTF-8"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+          />
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+          />
+
+          <div style={{ width: "100%", display: "inline", margin: "auto" }}>
+            {/* Slider */}
+            <Slider {...settings} ref={(slider) => setSlider()}>
+              {comps?.map((comp, i) => (
+                <div className="" key={i}>
+                  <Card data={comp} />
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </Box>
+      </div>
     </>
   );
 };

@@ -14,7 +14,7 @@ const PartnerSlider = (props) => {
   return (
     <>
       <Desktop>
-        <div className="relative outer-container bg-white">
+        <div className="relative outer-container bg-white mt-4">
           <div id="absolute-shadow" className="w-full h-full absolute left-0 top-0"></div>
           <div className="container mt-12 pr-6 pl-6 border-b border-gray-300 pb-8 pt-6">
             {props.comps.map((el) => {
@@ -48,7 +48,7 @@ const PartnerSlider = (props) => {
               height: 100px;
               min-width: 140px;
               margin-left: 100px;
-              animation: slide 15s linear infinite;
+              animation: slide 17s linear infinite;
             }
             @keyframes slide {
               0% {
